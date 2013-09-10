@@ -12,7 +12,7 @@ Please implement following test scenarios:
 
 Technical requirements:
 
-●	Selenium webdriver as main testing engine
-●	Ruby as programming language, which uses Selenium webdriver API
-●	Rspec as main testing framework(tasks should be run using “rspec .” command)
+*	Selenium webdriver as main testing engine
+*	Ruby as programming language, which uses Selenium webdriver API
+*	Rspec as main testing framework(tasks should be run using “rspec .” command)
 
