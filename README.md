@@ -7,8 +7,8 @@ _________________________________________
 Please implement following test scenarios:
 
 - [x]	As a public user I can access course catalogue at https://iversity.org
--	[] As a public user I can register and enroll for a course
-- [] As a registered user I can access my Dashboard
+-	[x] As a public user I can register and enroll for a course
+- [x] As a registered user I can access my Dashboard
 
 Technical requirements:
 
