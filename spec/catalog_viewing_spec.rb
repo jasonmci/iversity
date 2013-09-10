@@ -6,13 +6,12 @@ shared_examples "catalog viewing checker" do
 end
 
 describe "Catalog viewing" do
+  let(:course_list_page) { CourseListPage.given }
   context "via home page" do
-    let(:course_list_page) { CourseListPage.given }
     before { HomePage.open.go_to_courses }
     it_behaves_like "catalog viewing checker"
   end
   context "by direct url" do
-    let(:course_list_page) { CourseListPage.given }
     before { CourseListPage.open }
     it_behaves_like "catalog viewing checker"
   end

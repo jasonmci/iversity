@@ -75,6 +75,13 @@ class WebPage
   end
 
   private
+  def small_wait_until
+    time_start = Time.now
+    while Time.now - time_start < settings.timeout_short
+      yield
+    end
+  end
+
   def initialize
     wait_for_url(self.class::URL_PATTERN)
   end

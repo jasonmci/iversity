@@ -19,7 +19,15 @@ describe "Registration" do
 end
 
 describe "Course enrolling" do
+  let(:home_page) { HomePage.given }
+  let(:view_course_page) { ViewCoursePage.given }
+  before do
+    login_as_test_user
+    home_page.navigate_to_first_course
+    view_course_page.unenrol_if_possible.enroll
+  end
 
+  it { expect(view_course_page.text).to include('Congratulations!')}
 end
 
 

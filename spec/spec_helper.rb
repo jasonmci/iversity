@@ -14,10 +14,12 @@ def settings
 end
 
 Dir[File.join(File.dirname(__FILE__), '..', 'pages', '**', '*.rb')].each{ |f| require f }
+Dir[File.join(File.dirname(__FILE__), 'support', '**', '*.rb')].each{ |f| require f }
 
 include Capybara::DSL
 
 RSpec.configure do |config|
+  config.include BusinessActions
   config.expect_with(:rspec) { |c| c.syntax = :expect }
   config.color_enabled = true
   config.treat_symbols_as_metadata_keys_with_true_values = true
