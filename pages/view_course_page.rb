@@ -1,4 +1,3 @@
-
 require_relative 'web_page'
 
 class ViewCoursePage < WebPage
@@ -13,6 +12,7 @@ class ViewCoursePage < WebPage
 
   def enroll
     find(*L::ENROLL).click
+    self
   end
 
   def unenroll
